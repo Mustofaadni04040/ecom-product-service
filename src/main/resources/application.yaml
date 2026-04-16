@@ -12,5 +12,5 @@ spring:
       ddl-auto: create
 
 server:
-  port: 8083
+  port: 8081
 
