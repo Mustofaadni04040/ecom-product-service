@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// product controller
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/products")
