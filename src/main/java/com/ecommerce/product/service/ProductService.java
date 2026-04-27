@@ -1,5 +1,6 @@
 package com.ecommerce.product.service;
 
+
 import com.ecommerce.product.dto.ProductRequest;
 import com.ecommerce.product.dto.ProductResponse;
 import com.ecommerce.product.model.Product;
@@ -73,5 +74,10 @@ public class ProductService {
         return productRepository.searchProducts(keyword).stream()
                 .map(this::mapToProductResponse)
                 .collect(Collectors.toList());
+    }
+
+    public Optional<ProductResponse> getProductById(String id) {
+        return productRepository.findByIdAndActiveTrue(Long.valueOf(id))
+                .map(this::mapToProductResponse);
     }
 }
